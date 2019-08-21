@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+}
+
+#container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-container {
+  margin: auto;
+}
+
+#header-container {
+  flex: 1;
+}
+
+#instructions-container {
+  flex: 2;
+}

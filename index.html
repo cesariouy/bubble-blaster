@@ -2,7 +2,47 @@
 <html>
   <head>
     <title>Bubble Blaster</title>
+
+    <link rel="stylesheet" href="index.css" type="text/css"></script>
+
+    <!-- Script order matters due to interdependencies -->
+    <script src="vendor/keymaster.js"></script>
+    <script src="js/inheritance.js"></script>
+    <script src="js/moving-objects.js"></script>
+    <script src="js/target.js"></script>
+    <script src="js/bullet.js"></script>
+    <script src="js/bub.js"></script>
+    <script src="js/game.js"></script>
+
+    <script type="text/javascript">
+      window.onload = function() {
+        var canvas = document.createElement('canvas');
+        var ctx = canvas.getContext('2d');
+        var game = new BubbleBlaster.Game(ctx);
+
+        canvas.setAttribute('width', game.DIM_X);
+        canvas.setAttribute('height', game.DIM_Y);
+        canvas.setAttribute('style', 'background: black');
+
+        var canvasContainer = document.getElementById('canvas-container');
+        canvasContainer.appendChild(canvas);
+
+        game.start();
+
+        key('enter', function() {
+          game.end();
+          game = new BubbleBlaster.Game(ctx);
+          game.start();
+        });
+      };
+    </script>
   </head>
 
-  <body></body>
+  <body>
+    <div id="container">
+      <div id="header-container" class="sub-container">bubble shooter</div>
+      <div id="canvas-container" class="sub-container"></div>
+      <div id="instructions-container" class="sub-container">instructions</div>
+    </div>
+  </body>
 </html>
