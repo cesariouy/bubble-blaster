@@ -3,6 +3,8 @@
   <head>
     <title>Bubble Blaster</title>
 
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap" />
     <link rel="stylesheet" href="index.css" type="text/css"></script>
 
     <!-- Script order matters due to interdependencies -->
@@ -40,9 +42,40 @@
 
   <body>
     <div id="container">
-      <div id="header-container" class="sub-container">bubble shooter</div>
+      <div id="header-container" class="sub-container">bubble blaster</div>
       <div id="canvas-container" class="sub-container"></div>
-      <div id="instructions-container" class="sub-container">instructions</div>
+
+      <div id="instructions-container" class="sub-container">
+        <div id="instructions-controls">
+          <div>
+            <div>
+              [<span class="arrow">⬆️</span>][<span class="arrow">⬇️</span>]
+              control forward motion
+            </div>
+            <div>
+              [<span class="arrow">⬅️</span>][<span class="arrow">➡️</span>]
+              change direction
+            </div>
+          </div>
+
+          <div>
+            <div>[spacebar] fire</div>
+            <div>[enter] restart</div>
+          </div>
+        </div>
+
+        <div id="instructions-notes">
+          You must have forward motion in order to fire
+          (you can't just spin around and shoot in all directions)
+        </div>
+      </div>
+
+      <div id="footer-container" class="sub-container">
+        <div>
+          made with  ❤️ by <a href="https://cesariouy.github.io/">cesario uy</a>
+          / <a href="https://github.com/cesariouy/bubble-blaster">code</a>
+        </div>
+      </div>
     </div>
   </body>
 </html>

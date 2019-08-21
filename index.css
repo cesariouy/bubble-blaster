@@ -6,16 +6,50 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: 'Roboto Mono', monospace;
 }
 
 .sub-container {
   margin: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 #header-container {
   flex: 1;
+  text-transform: uppercase;
+  line-height: 0.67;
+  font-size: 14vh;
 }
 
 #instructions-container {
   flex: 2;
+  align-items: center;
+}
+
+#instructions-controls {
+  display: flex;
+}
+
+#instructions-controls div {
+  margin: 0 5px;
+}
+
+.arrow {
+  font-family: monospace;
+}
+
+#instructions-notes {
+  max-width: 500px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#footer-container {
+  flex: 1;
+  justify-content: flex-end;
+}
+
+#footer-container a {
+  color: #1155cc;
 }

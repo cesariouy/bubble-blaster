@@ -45,7 +45,7 @@
     var statsX = this.DIM_X - 140;
     var statsY = this.DIM_Y - 20;
 
-    this.ctx.font = '16px courier';
+    this.ctx.font = '16px "Roboto Mono"';
     this.ctx.fillStyle = 'yellow';
     this.ctx.fillText('time: ' + elapsedTime.toString() + 's', statsX, statsY);
   };
@@ -81,7 +81,7 @@
     if (this.targets.length === 0) {
       this.end();
       this.draw();
-      this.ctx.font = '24px courier';
+      this.ctx.font = '24px "Roboto Mono"';
       this.ctx.fillStyle = 'yellow';
 
       var winMsgX = (this.DIM_X / 2) - 200;
@@ -130,7 +130,7 @@
     for (var i = this.targets.length - 1; i >= 0; i--) {
       if (this.targets[i].isCollidedWith(this.bub)) {
         this.end();
-        this.ctx.font = '24px courier';
+        this.ctx.font = '24px "Roboto Mono"';
         this.ctx.fillStyle = 'yellow';
 
         var loseMsgX = (this.DIM_X / 2) - 200;
